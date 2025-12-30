@@ -91,10 +91,10 @@ services:
 
     command: >
       llama-server
-      --model /models/Llama-3.2-1B-Instruct-Q4_K_M.gguf
+      --model /models/Llama-3.2-1B-Instruct-Q5_K_M.gguf
       --host 0.0.0.0
       --port 8080
-      --n-gpu-layers 40
+      --n-gpu-layers 99
       --ctx-size 4096
       --temp 0.2
       --repeat_penalty 1.15
@@ -233,4 +233,3 @@ Docker will **not** list exposed ports — this is expected.
 ## Tagging & Immutability Policy
 
 - Versioned runtime tags are immutable
-- Tags will never b
