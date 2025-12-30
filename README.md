@@ -91,16 +91,20 @@ services:
 
     command: >
       llama-server
-      --model /models/Llama-3.2-1B-Instruct-Q5_K_M.gguf
+      --model /models/Llama-3.2-3B-Instruct-Q4_K_S.gguf
       --host 0.0.0.0
       --port 8080
-      --n-gpu-layers 99
-      --ctx-size 4096
+      --n-gpu-layers 24
+      --ctx-size 2048
+      --mmap
       --temp 0.2
       --repeat_penalty 1.15
       --repeat_last_n 256
       --top_p 0.9
       --top_k 40
+      --presence_penalty 0.6
+      --frequency_penalty 0.8
+
 ```
 
 Start the container:
@@ -109,6 +113,11 @@ Start the container:
 docker compose up -d
 ```
 
+Restart container after downloading new model and/or changing docker-compose.yml:
+
+```bash
+docker compose down && docker compose up -d && docker logs -f llama_cpp
+```
 ---
 
 ## API Access
@@ -138,15 +147,21 @@ http://your-jetson-host-name:8080
 
 ### Known-good models for Orin Nano 8GB
 
-**Llama 3.2 1B Instruct**
+**Llama 3.2 3B Instruct**
 ```
-https://huggingface.co/unsloth/Llama-3.2-1B-Instruct-GGUF
+https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF
 ```
 
 Recommended quantization:
 ```
-Q5_K_M  (Will easily fit and run fast, but may give poor data results)
+Q4_K_S
 ```
+
+Download to models/ directory:
+```
+wget https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_S.gguf
+```
+
 
 ---
 
