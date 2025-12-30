@@ -5,6 +5,7 @@ A **runtime-only** CUDA-enabled Docker image for running **llama.cpp** on **NVID
 
 This image is intended for **inference only** and is built specifically for Jetson-class ARM64 devices using NVIDIA’s L4T stack.
 
+![Screen Shot Demo](llama_cpp_jetson_demo.gif)
 ---
 
 ## Docker Hub
