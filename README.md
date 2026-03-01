@@ -1,5 +1,5 @@
 # llama.cpp-on-jetson-docker
-A docker image for llama.cpp on Nvidia Jetson Orin Nano 8gb with Cuda
+A docker image for llama.cpp on Nvidia Jetson Orin Nano 8gb or Orin NX 16gb with Cuda.
 
 A **runtime-only** CUDA-enabled Docker image for running **llama.cpp** on **NVIDIA Jetson Orin Nano** with **JetPack 6 / CUDA 12.6**.
 
@@ -59,7 +59,7 @@ All runtime tags reference the **same immutable image**.
 
 ## Supported Hardware
 
-- NVIDIA Jetson Orin Nano 8GB
+- NVIDIA Jetson Orin Nano 8GB or NX 16GB
 - JetPack 6.x (L4T r36.x)
 - CUDA 12.6
 - Active cooling strongly recommended
@@ -67,6 +67,7 @@ All runtime tags reference the **same immutable image**.
 > Note:  
 > “Orin Nano Super” is not a separate SKU.  
 > It refers to running the Orin Nano in MAX power mode.
+> The NX 16gb can run much larger models and is generally faster.
 
 ---
 
