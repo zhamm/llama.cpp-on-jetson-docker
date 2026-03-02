@@ -147,9 +147,31 @@ http://your-jetson-host-name:8080
 
 ## Recommended Models (GGUF)
 
+### Known-good models for Orin NX 16GB
+
+**Qwen3 4B Instruct 2507 Abliterated**
+
+This model is uncensored, so no guardrails or safeties.
+
+```
+https://huggingface.co/mradermacher/Huihui-Qwen3-4B-Instruct-2507-abliterated-GGUF/blob/main/Huihui-Qwen3-4B-Instruct-2507-abliterated.Q4_K_M.gguf
+```
+
+**Qwen3 4B Vision Instruct**
+
+This model is great for image analysis and annotation.
+
+```
+https://huggingface.co/unsloth/Qwen3-VL-4B-Instruct-GGUF/resolve/main/Qwen3-VL-4B-Instruct-Q4_K_M.gguf
+```
+
+
 ### Known-good models for Orin Nano 8GB
 
 **Llama 3.2 3B Instruct**
+
+A good all around model that is pretty fast and lightweight.
+
 ```
 https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF
 ```
@@ -168,6 +190,9 @@ wget https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Ll
 ---
 
 **TinyLlama 1.1B Chat**
+
+Very small and should run on even the most complicated configurations.
+
 ```
 https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF
 ```
@@ -175,6 +200,9 @@ https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF
 ---
 
 **unsloth/Qwen3-4B-GGUF**
+
+A good all around model that is fast and good reasoning.  
+
 ```
 https://huggingface.co/unsloth/Qwen3-4B-GGUF
 ```
